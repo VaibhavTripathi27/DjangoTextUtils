@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Utils</title>
+</head>
+<body>
+    <h2 style="text-align: center;">This is text analyzer</h2>
+    <h4 style="text-align: center;">Enter your text and it will analyze your text.</h4>
+
+    <form action="/removepunctuations" method="post">{% csrf_token %}
+        <textarea name="text" style="width: 1000px; height: 200px; margin-left: 100px;"></textarea><br>
+        <input type="checkbox" style="margin-left: 100px; margin-bottom: 10px;" name="removepunctuations"> Remove Punctuation
+        <input type="checkbox" style="margin-left: 100px; margin-bottom: 10px;" name="spaceremover"> Remove Space
+        <input type="checkbox" style="margin-left: 100px; margin-bottom: 10px;" name="capitalize"> Capitalize
+        <br>
+        <button type="submit" style="margin-left: 100px; height: 40px; width: 90px; ">Analyze Text</button>
+    </form>
+</body>
+</html>
